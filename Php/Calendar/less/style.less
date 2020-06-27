@@ -1,0 +1,75 @@
+*{margin: 0;}
+body{
+  margin: 0;
+  height: 100vh;
+}body::-webkit-scrollbar {
+  width: 1em;
+} 
+body::-webkit-scrollbar-track {
+  box-shadow: 0px;
+}
+
+
+
+
+/* intervals*/
+.big_spacer{height: 2vw; max-height: 39px;}
+.spacer{height: 1.2vw; max-height: 23px;}
+
+
+
+.calendar{
+  width: 100%;
+  h2{
+    position: relative;
+    left: 14.6%;
+  }
+  svg{
+    position: absolute;
+    opacity: 0.1;
+  }
+  .calendar_scroller{
+    overflow-y: hidden;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    height: 11vw;
+    position: relative;
+    width: 97%;
+    left: 1.5%;
+    [data-tooltip]:before {            
+      position : absolute;
+      content : attr(data-tooltip);
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.5s, visibility 0.5s;
+      width: 100%;
+      font-size: 1vw;
+      margin-top: 6vw;
+    }
+    [data-tooltip]:hover:before {        
+      visibility: visible;
+      opacity: .8;
+      transition: opacity 0.5s, visibility 0.5s;
+    }
+    .day_cell{      
+      flex: 0 0 auto;
+      width: 11vw;
+      height: 11vw;
+      .month_day{
+        position: relative;
+        top: 3vw;
+        font-size: 6vw;
+      }
+      .month_name{
+        position: relative;
+        right: 20%;
+        top: 35%;
+        text-align: right;
+      }
+    }    
+  }
+}
+
+.mobile_screen{display: none;}
