@@ -1,0 +1,82 @@
+// SCSS библиотека
+@import '../../../../styles/setting';
+
+.introText {
+  color : $white ;
+  letter-spacing : 0.05em ;
+  position : absolute ;
+  text-transform : uppercase ;
+  top : 30% ;
+  width : 100% ;
+
+  .introText__title {
+    
+    /* Fonts */
+    font-family : SF UI Text ;
+    font-size : 70px ;
+    font-style : normal ;
+    font-weight : bold ;
+    line-height : 80px ;
+    margin-bottom : 30px ;
+    padding : 0 40px ;
+    text-align : center ;
+    width : 100% ;
+    width : 100% ;
+  }
+
+  .introText__subtitle {
+
+    /* Fonts */
+    font-family : SF UI Text ;
+    font-size : 20px ;
+    font-style : normal ;
+    font-weight : 500 ;
+    letter-spacing : 0.03em ;
+    line-height : 32px ;
+    padding : 0 50px ;
+    text-align : center ;
+  }
+}
+
+// Media query
+@include mq(1440px, max) {
+  .introText {
+    .introText__title {
+      font-size : 70px ;
+      margin-bottom : 7vw ;
+    }
+
+    .introText__subtitle {
+      font-size : 20px ;
+      letter-spacing : unset ;
+      line-height : 32px ;
+    }
+  }
+}
+
+@include mq(768px, max) {
+  .introText {
+    .introText__title {
+      font-size : 42px ;
+    }
+
+    .introText__subtitle {
+      font-size : 18px ;
+      line-height : 28px ;
+    }
+  }
+}
+
+@include mq(576px, max) {
+  .introText {
+    .introText__title {
+      font-size : 32px ;
+      line-height : 40px ;
+    }
+
+    .introText__subtitle {
+      font-size : 16px ;
+      line-height : 26px ;
+    }
+  }
+}

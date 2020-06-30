@@ -1,0 +1,40 @@
+// SCSS библиотека
+@import '../../../styles/setting';
+
+.intro {
+
+  /* Image */
+  background : url('/images/backgrounds/intro_bg_image.png') ;
+  background-position : center center ;
+  background-repeat : no-repeat ;
+  -webkit-background-size : cover ;
+  -moz-background-size : cover ;
+  -o-background-size : cover ;
+  background-size : cover ;
+  height : 100vh ;
+  min-height : 892px ;
+  position : relative ;
+  width : 100% ;
+}
+
+.buttonGlobalLink__container {
+  @include positionCenter;
+  top : 70% ;
+}
+
+.buttonScrollDown__container {
+  @include positionCenter;
+  top : 95% ;
+}
+
+@include mq(770px, max) {
+  .intro {
+    min-height : 1024px ;
+  }
+}
+
+@include mq(576px, max) {
+  .intro {
+    min-height : 568px ;
+  }
+}

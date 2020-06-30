@@ -1,0 +1,21 @@
+@import '../../styles/setting';
+
+.profile_right_container {
+  position: relative;
+  width: 75%;
+  display: flex;
+}
+
+@include mq($BigTabletWidth, max) {
+  .right_container {
+    /*Позволяет заполнить всю оставшуюся ширину*/
+    flex-grow: 1;
+  }
+}
+
+@include mq($TableWidth, max) {
+  .right_container {
+    padding: 16px 32px;
+    width: 100%;
+  }
+}

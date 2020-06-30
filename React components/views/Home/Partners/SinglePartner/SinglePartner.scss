@@ -1,0 +1,22 @@
+@import '../../../styles/setting';
+
+.singlePartner {
+  margin : 2.5% 5% ;
+  max-width : 230px ;
+}
+
+
+@include mq($tabletWidth, max) {
+  .singlePartner {
+    margin : 2% 3.5% ;
+    max-width : 120px ;
+  }
+}
+
+
+@include mq($mobileWidth, max) {
+  .singlePartner {
+    margin : 2.5% ;
+    max-width : 55px ;
+  }
+}

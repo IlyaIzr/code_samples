@@ -1,0 +1,134 @@
+@import '../../../styles/setting';
+
+.shop {
+  background-color : $light_grey ;
+  padding : 0 10% 20px ;
+}
+
+.shop__img_container {
+  display : flex ;
+  flex-direction : row ;
+
+  .shop__img {
+    max-width : 60% ;
+  }
+
+  .shop__img_right_shadow {
+    @include size(10%, 10vw);
+    background-color : $secondary ;
+    min-height : 380px ;
+  }
+}
+
+.shop__info {
+  padding : 100px 2% ;
+
+  .shop__title {
+
+    /* TITLE 32 BOLD */
+
+    font-family : SF UI Text ;
+    font-size : 32px ;
+    font-style : normal ;
+    font-weight : bold ;
+    line-height : 40px ;
+    margin : 40px 0 ;
+    text-transform : uppercase ;
+  }
+
+  .shop__description {
+
+    /* Body 18 regular */
+
+    font-family : SF UI Text ;
+    font-size : 18px ;
+    font-style : normal ;
+    font-weight : normal ;
+    line-height : 30px ;
+    margin : 40px 0 ;
+  }
+}
+
+
+// Media queries
+
+@include mq(1440px, max) {
+  .shop {
+    padding : 0 ;
+  }
+
+  .shop__img_container {
+    .shop__img_right_shadow {
+      @include size(8%, 30vw);
+      min-height : 330px ;
+    }
+  }
+
+  .shop__info {
+    padding : 100px 10% ;
+  }
+}
+
+@include mq(1024px, max) {
+  .shop__img_container {
+    .shop__img_right_shadow {
+      @include size(8%, 40vw);
+      min-height : 350px ;
+    }
+  }
+
+  .shop__info {
+    padding : 100px 10% ;
+  }
+}
+
+@include mq(768px, max) {
+  .shop__img_container {
+    .shop__img_right_shadow {
+      @include size(8%, 43vw);
+      min-height : 280px ;
+    }
+  }
+
+  .shop__info {
+    padding : 70px 10% ;
+  }
+}
+
+
+@include mq(605px, max) {
+  .shop__img_container {
+    .shop__img {
+      max-width : 90% ;
+    }
+
+    .shop__img_right_shadow {
+      @include size(10%, 63vw);
+      max-height : 90% ;
+      min-height : 211px ;
+    }
+  }
+
+  .shop__info {
+    padding : 30px 7.5% ;
+
+    .shop__title {
+      /* TITLE(mob) BOLD16 */
+
+      font-family : SF UI Text ;
+      font-size : 16px ;
+      font-style : normal ;
+      font-weight : bold ;
+      line-height : 32px ;
+
+    }
+
+    .shop__info {
+      font-family : SF UI Text ;
+      font-size : 12px ;
+      font-style : normal ;
+      font-weight : normal ;
+      line-height : 20px ;
+    }
+  }
+}

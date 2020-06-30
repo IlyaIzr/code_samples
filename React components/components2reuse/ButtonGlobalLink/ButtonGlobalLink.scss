@@ -1,0 +1,124 @@
+// SCSS библиотека
+@import '../../../styles/setting';
+
+.globalLink {
+  @include afs(18px, 18px, 14px);
+  @include size(210px, 60px);
+  display : block ;
+  line-height : 18px ;
+
+  button {
+    @include size(210px, 60px);
+    @include br(1px);
+    border-radius : 1px ;
+    cursor : pointer ;
+    padding : 0 ;
+    text-transform : uppercase ;
+  }
+}
+
+.globalLink__default {
+  @include fontsElem($fw: 500, $color: $secondary);
+
+  &:visited {
+    color : $secondary ;
+  }
+
+  button {
+    background-color : $light_grey ;
+    border : 1px solid $secondary ;
+    color : $secondary ;  
+  }  
+
+  button:disabled,
+  button[disabled] {
+    background-color : $light_grey ;
+    border : 1px solid $primary ;
+    color : $primary ;    
+  }
+
+  button:hover {
+    background-color : $light_grey ;
+    border : 1px solid $hover ;
+    color : $hover ;    
+  }
+
+  button:focus {
+    background-color : $primary ;
+    border : 1px solid $primary ;
+    color : $white ;    
+  }
+}
+
+.globalLink__light {
+  @include fontsElem($fw: 500, $color: $primary);
+
+  &:visited {
+    color : $primary ;
+  }
+
+  button {
+    background-color : $light_grey ;
+    border : 1px solid $primary ;
+    color : $primary ;
+  }  
+}
+
+.globalLink__dark {
+  @include fontsElem($fw: 500, $color: $primary);
+
+  &:visited {
+    color : $white ;
+  }
+
+  button {
+    background-color : $primary ;
+    border : 1px solid $primary ;
+    color : $white ;
+  }
+
+  button:disabled,
+  button[disabled] {
+    background-color : $light_grey ;
+    border : 1px solid $primary ;
+    color : $primary ;    
+  }
+
+  button:hover {
+    background-color : $hover ;
+    border : 1px solid $hover ;
+    color : $white ;    
+  }
+
+  button:focus {
+    background-color : $secondary ;
+    border : 1px solid $secondary ;
+    color : $white ;    
+  }
+}
+
+// Media query
+@include mq(768px, max) {
+  .globalLink {
+    @include size(280px, 8vw);
+    max-height : 60px ;
+    min-height : 48px ;
+
+    button {
+      @include size(280px, 8vw);
+      max-height : 60px ;
+      min-height : 48px ;
+    }
+  }
+}
+
+
+@include mq(320px, max) {
+  .globalLink {
+    @include size(288px, 48px);
+
+    button {
+      @include size(288px, 48px);
+    }
+  }
+}

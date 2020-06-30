@@ -1,0 +1,23 @@
+// SCSS библиотека
+@import '../../../../styles/setting';
+
+.iconsComposer {
+  position : absolute ;
+  text-align : center ;
+  top : 30% ;
+
+  .iconsComposer__filler {
+    margin-top : 24px ;
+  }
+
+  .iconsComposer__icon {
+    margin : 24px ;
+  }
+}
+
+
+@include mq(328px, max) {
+  .iconsComposer {
+    display : none ;
+  }
+}

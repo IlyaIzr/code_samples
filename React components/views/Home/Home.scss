@@ -1,0 +1,32 @@
+@import '../../styles/setting';
+
+.home__flex_wrapper {
+  display : flex ;
+  flex-wrap : wrap ;
+}
+
+.home__flex_wrapper_left {
+  width : 75% ;
+}
+
+.home__flex_wrapper_right {
+  background : $homeMain ;
+  width : 25% ;
+}
+
+
+@include mq(1024px, max) {
+  .home__flex_wrapper_left {
+    width : 100% ;
+  }
+
+  .home__flex_wrapper_right {
+    width : 100% ;
+  }
+}
+
+.service_Chat__flex_wrapper {
+  display : flex ;
+  flex-wrap : wrap ;
+  width : 100% ;
+}

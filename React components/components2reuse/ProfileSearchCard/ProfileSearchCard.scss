@@ -1,0 +1,103 @@
+@import '../../../styles/setting';
+
+.profileSearchCard {
+  margin: 4em 3.5em;
+  max-width: 280px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 1px;
+}
+
+.profileSearchCard__avatar {
+  display: block;
+  height: auto;
+  width: auto;
+  max-height: 280px;
+  max-width: 280px;
+  /* альтернатива 
+  object-fit: cover;
+  */
+}
+
+
+.profileSearchCard__content {
+  padding: .25em .5em;
+  width: 100%;
+}
+
+.profileSearchCard__name_container {
+  display: flex;
+}
+
+.profileSearchCard__name {
+  color: $black;
+
+  /* Title2 18 bold */
+  font-family: SF UI Text;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.profileSearchCard__add_friend {
+  margin-left: .5em;
+}
+
+.profileSearchCard__location {
+  color: $gray;
+  text-transform: capitalize;
+  margin-bottom: .25em;
+
+  /* body3 10 regular */
+  font-family: SF UI Text;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 16px;
+}
+
+.profileSearchCard__fieldOfExpertise {
+  color: $black;
+  margin-bottom: .5em;
+
+  /* Body2 14 regular */
+  font-family: SF UI Text;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+
+}
+
+.profileSearchCard__description {
+  color: $black;
+
+  /* Body2 14 regular */
+  font-family: SF UI Text;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+@media(max-width: 576px) {
+  .profileSearchCard {
+    margin: 15px 2vw;
+    max-width: 40vw;
+  }
+
+  .profileSearchCard__avatar {
+    max-height: 42vw;
+    max-width: 42vw;
+  }
+
+  .profileSearchCard__name {
+
+    font-family: SF UI Text;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+  }
+
+}

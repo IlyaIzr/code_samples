@@ -1,0 +1,50 @@
+@import "../../../../styles/setting";
+
+.profileAddPhoto__condition {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-family: SF UI Text;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: $secondary;
+  margin-bottom: 1vw;
+  margin-top: 1vw;
+}
+
+.profileAddPhoto__photo_requirements {
+  font-family: SF UI Text;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  color: $secondary;
+  width: 15vw;
+  margin: 1.2vw;
+  display: flex;
+}
+
+@include mq(768px, max) {
+  .profileAddPhoto__photo_requirements {
+    width: 50vw;
+  }
+  .profileAddPhoto__condition {
+    display: inline;
+    margin-left: 10vw;
+  }
+}
+
+@include mq(320px, max) {
+  .profileAddPhoto__photo_requirements {
+    width: 50vw;
+    font-size: 10px;
+    line-height: 16px;
+  }
+  .profileAddPhoto__condition {
+    display: flex;
+  }
+}
