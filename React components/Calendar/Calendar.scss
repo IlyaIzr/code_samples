@@ -1,0 +1,114 @@
+// Импрорт общей библиотеки
+@import '../../../styles/setting';
+
+.calendar {
+  @include size(280px, auto);
+  box-shadow : 0 0 5px rgba(0, 0, 0, 0.15) ;
+  padding : 23px 24px 10px ;
+  background-color: $white;
+}
+
+.calendar-header {
+  display : flex ;
+  height : 21px ;
+  justify-content : space-between ;
+  margin-bottom : 25px ;
+  padding : 0 8px ;
+}
+
+.calendar-title {
+  @include fontsElem($fw: 500, $tt: normal);
+  font-size : 18px ;
+  text-align : center ;
+}
+
+.calendar__arrow-next,
+.calendar__arrow-prev {
+  background : none ;
+
+  &:hover {
+    cursor : pointer ;
+  }
+}
+
+.calendar__arrow-prev {
+  margin-right : 10px ;
+}
+
+.calendar__day {
+  align-items : center ;
+  display : flex ;
+  height : 17px ;
+  justify-content : space-around ;
+  margin-bottom : 20px ;
+}
+
+.calendar__day > span {
+  @include fontsElem($tt: normal);
+  font-size : 12px ;
+  position : relative ;
+  &:hover {
+    cursor : pointer ;
+  }
+  &::after { 
+    background-color : $btnOrange ;
+    content : '' ;
+    display : block ;
+    height : 1px ;
+    left : 0 ;
+    position : absolute ;
+    top : 15px ;
+    transition : width 0.3s ease-out ;
+    width : 0 ;
+  }
+  &:hover::after,
+  &:focus::after {
+    width : 100% ;
+  }
+}
+
+.calendar__number {
+  text-align : center ;
+  width : 33.1px ;
+}
+
+.calendar__number-wrapper {
+  display : flex ;
+  flex-wrap : wrap ;
+  justify-content : space-between ;
+}
+
+.calendar__number {
+  @include fontsElem($fw: 500);
+  font-size : 14px ;
+  height : 20px ;
+  margin-bottom : 15px ;
+
+  &>span {
+    position : relative ;
+    &:hover {
+      cursor : pointer ;
+    }
+    &::after { 
+      background-color : $btnOrange ;
+      content : '' ;
+      display : block ;
+      height : 1px ;
+      left : 0 ;
+      position : absolute ;
+      transition : width 0.3s ease-out ;
+      width : 0 ;
+    }
+
+    &:hover::after,
+    &:focus::after {
+      cursor : pointer ;
+      width : 100% ;
+    }
+  }
+}
+// Для чисел прошлого месяца - серый цвет
+.calendar__number--grey {
+  color : $grizzly ;
+}
+
